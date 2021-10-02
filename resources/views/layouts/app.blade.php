@@ -14,18 +14,15 @@
     <nav class="container navbar navbar-light">
         <div class="container">
             <a href="/" class="navbar-brand">Task Manager</a>
-
-
-
             @guest
                 <div class="row">
                     @if (Route::has('login'))
                         <div class="col"><a class="btn btn-sm btn-outline-secondary" href="{{ route('login') }}">{{ __('Login') }}</a></div>
                     @endif
 
-                    @if (Route::has('register'))
-                        <div class="col" style="margin-left: -8px;"><a class="btn btn-sm btn-outline-secondary" href="{{ route('register') }}">{{ __('Register') }}</a></div>
-                    @endif
+{{--                    @if (Route::has('register'))--}}
+{{--                        <div class="col" style="margin-left: -8px;"><a class="btn btn-sm btn-outline-secondary" href="{{ route('register') }}">{{ __('Register') }}</a></div>--}}
+{{--                    @endif--}}
                 </div>
             @else
                 <li class="nav-item dropdown" style="list-style-type: none;">
@@ -47,11 +44,7 @@
             @endguest
         </div>
     </nav>
-
     <div class="container">
-
-
-
         @yield('content')
     </div>
 </div>
